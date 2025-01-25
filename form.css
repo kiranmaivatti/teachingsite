@@ -1,0 +1,60 @@
+
+h2.first {
+    text-align: center; /* Center align the heading */
+    color: #eaf7ff; /* Optional: Change text color */
+}
+body{
+    font-family:Arial, Helvetica, sans-serif; color: #2b668c;
+    background-image: url('images/background.jpg');
+}
+.bold {
+    font-weight: bold; /* Make text bold */
+}
+img {
+    max-width: 500px; /* Set a maximum width */
+     /* Set a maximum height */
+    border: 1px solid #ccc; /* Optional: Add a border to the image */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+.image-container {
+    text-align: center; /* Center-align the image and text */
+}
+.caption {
+    margin-top: 10px; /* Add space above the caption */
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+}
+.numbered-list {
+    width: 60%;
+    margin: 20px auto; /* Center the list */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Set text color */
+}
+.numbered-list ol {
+    counter-reset: list-counter; /* Reset counter */
+    padding-left: 20px; /* Indent the list */
+}
+.numbered-list li {
+    margin-bottom: 10px; /* Add space between items */
+}
+.center-button {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20px; /* Full viewport height */
+}
+button {
+    align-items: center;
+    background-color: #2b668c; /* Blue background */
+    color: rgb(241, 234, 237); /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for a comfortable size */
+    font-size: 18px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+button:hover {
+    align-items: center;
+    background-color: #7a6f6f/* Darker grey on hover */
+}

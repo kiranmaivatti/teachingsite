@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Freelance_Project</title>     
+</head>
+<body>
+  <div data-include="header.html"></div>
+    <h2 class="text-padding">Value Video</h2>    
+    <div class="container">
+    <!-- Video Section -->
+    <video width="300" height="200" controls>
+        <source src="video.mp4" type="video/mp4">   
+    </video>
+    <div class="text">
+        <h2>14 Day Freelancer: Starting Your Freelancing Journey NOW!</h2>
+            <p>14 Day Teacher Transformation is for motivated teachers who want 
+                to start working as freelance instructional designers NOW without 
+                waiting years and investing thousands of dollars in ID bootcamps.
+                Right now, get lifetime access for just $49.95 (Normally $197). Offer 
+                expires soon.</p>
+        </div>   
+    </div><br>
+    <div class="center-button">
+    <button onclick="redirect()">Start 14 Day Teacher Transformation Today</button>
+    </div>
+<br><br>
+    <div class="gallery" id="gallery">
+        <!-- Dynamic Content Will Be Inserted Here -->
+      </div>
+      <script>
+        // Testimonial Data
+        const testimonials = [
+          {
+            image: "images/Inna.webp", // Replace with actual image
+            rating: 5,
+            testimonial:
+              "If you are looking to get out of education and into instructional design, I highly recommend reaching out to Kristin for a coffee chat! She is so relatable and passionate about helping people. - Inna",
+          },
+          {
+            image: "images/Cristina.png", // Replace with actual image
+            rating: 5,
+            testimonial:
+              "Kristin has an incredible ability to connect with people and help them find clarity in their career paths. Her advice has been invaluable in shaping my goals and next steps. - Cristina",
+          },
+          {
+            image: "images/Adam.png", // Replace with actual image
+            rating: 4,
+            testimonial:
+              "She is a good listener/coach with insightful questions and feedback. In just 30 minutes, I have an outside-the-box goal and support for my plan. - Adam",
+          },
+        ];
+        // Generate Star Ratings
+        function generateStars(rating) {
+          return "★".repeat(rating) + "☆".repeat(5 - rating);
+        }
+    
+        // Populate Gallery Content
+        const gallery = document.getElementById("gallery");
+        testimonials.forEach(({ image, rating, testimonial }) => {
+          const galleryItem = document.createElement("div");
+          galleryItem.className = "gallery-item";
+          galleryItem.innerHTML = `
+            <img src="${image}" alt="User Image">
+            <div class="rating">${generateStars(rating)}</div>
+            <div class="testimonial">"${testimonial}"</div>
+          `;
+          gallery.appendChild(galleryItem);
+        });
+        function redirect() {
+            window.location.href = "orderForm.html";
+        }
+// Function to include external HTML content
+function includeHTML() {
+  const elements = document.querySelectorAll('[data-include]');
+  elements.forEach(async (el) => {
+      const file = el.getAttribute('data-include');
+      if (file) {
+          try {
+              const response = await fetch(file);
+              if (response.ok) {
+                  el.innerHTML = await response.text();
+              } else {
+                  el.innerHTML = `<p>Error loading ${file}</p>`;
+              }
+          } catch (err) {
+              console.error(`Error including ${file}:`, err);
+          }
+      }
+  });
+}
+// Call the function after the DOM is loaded
+document.addEventListener('DOMContentLoaded', includeHTML);
+      </script>
+    <h2 class="first">14 Day Freelancer Agenda</h2>    
+<h2>14 Day Instructional Design Freelancer Course Outline</h2>
+    <div class="day-section">
+      <h3>Part 1: Foundations & Mindset (Days 1-3)</h3>
+        <h3>Day 1</h3>
+        <p>Welcome to Your ID Freelance Journey<br>
+          - My story: From teacher to ID entrepreneur<br>
+          - Course navigation and community guidelines<br>
+          - Setting expectations and goals<br>
+          <b>Action Items:</b><br>
+          1. Join community platform and introduce yourself<br>
+          2. Complete "ID Freelancer Goals" worksheet<br>
+          3. Schedule your daily learning time for the next 14 days</p>
+    </div>
+    <div class="day-section">
+      <h3>Day 2</h3>
+        <p>Translating Your Teaching Experience
+          <br>
+          - Teaching skills that transfer to ID
+          <br>
+          - Industry terminology guide
+          <br>
+          - Understanding the ID landscape  
+          <br>
+          <b>Action Items:</b>
+          <br>
+          1. Create your skills translation document
+          <br>
+          2. Research 3Freelance ID job postings and identify overlapping skills
+          <br>
+          3. Write your ID elevator pitch</p>
+    </div>
+
+    <div class="day-section">
+      <h3>Day 3</h3>
+        <p>The ID Industry Deep Dive
+          <br>
+          - Current trends in eLearning
+          <br>
+          - Types of ID projects and specializations
+          <br>
+          - Key players and potential clients
+          <br>
+          <b>Action Items:</b>
+          <br>
+          1. Choose your ID specialization focus
+          <br>
+          2. Create a list of 10 dream clients
+          <br>
+          3. Complete the "ID Market Research" worksheet</p>
+    </div>
+
+    <div class="day-section">
+      <h3>Part 2: Essential ID Skills & Tools (Days 4-8)</h3>
+        <h3>Day 4</h3>
+        <p>Adult Learning Principles
+          <br>
+          - Adult learning theory basics
+          <br>
+          - Engaging adult learners
+          <br>
+          - Assessment strategies
+          <br>
+          <b>Artifact:</b> Create a micro-learning module outline using adult learning principles</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 5</h3>
+        <p>Instructional Design Models
+          <br>
+          - ADDIE Model deep dive
+          <br>
+          - SAM Model overview
+          <br>
+          - Action Mapping introduction
+          <br>
+          <b>Artifact:</b> Design a project plan using ADDIE model</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 6</h3>
+        <p>eLearning Development Tools
+          <br>
+          - Articulate Rise 360 basics
+          <br>
+          - Storyline fundamentals
+          <br>
+          - Free tool alternatives
+          <br>
+          <b>Artifact:</b> Develop a simple interactive module using Rise 360</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 7</h3>
+        <p>Visual Design for Learning
+          <br>
+          - Basic design principles<br>
+          - Creating engaging visuals<br>
+          - Working with templates<br>
+          <b>Artifact:</b> Design a branded course template</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 8</h3>
+        <p>Storyboarding & Script Writing<br>
+          - Storyboard creation<br>
+          - Writing effective scripts<br>
+          - Audio/video considerations<br>
+          <b>Artifact:</b> Create a storyboard and script for a 5-minute module</p>
+    </div>
+
+    <div class="day-section">
+      <h3>Part 3: Business Setup & Pricing (Days 9-11)</h3>
+        <h3>Day 9</h3>
+        <p>Business Foundations<br>
+          - Legal considerations<br>
+          - Setting up your business structure<br>
+          - Essential tools and software<br>
+          <b>Action Items:</b><br>
+          1. Create business checklist<br>
+          2. Set up business email and calendar<br>
+          3. Choose your business management tools</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 10</h3>
+        <p>Freelance Platforms & Profiles<br>
+          - Fiverr profile optimization<br>
+          - Upwork strategy<br>
+          - LinkedIn presence<br>
+          <b>Action Items:</b><br>
+          1. Set up profiles on two platforms<br>
+          2. Create your first gig description<br>
+          3. Develop portfolio samples</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 11</h3>
+        <p>Pricing & Proposals<br>
+          - Industry standard rates<br>
+          - Project pricing strategies<br>
+          - Creating winning proposals<br>
+          <b>Action Items:</b><br>
+          1. Create your pricing structure<br>
+          2. Develop proposal template<br>
+          3. Practice estimating project costs</p>
+    </div>
+
+    <div class="day-section">
+      <h3>Part 4: Growth & Sustainability (Days 12-14)</h3>
+        <h3>Day 12</h3>
+        <p>Marketing Your Services<br>
+          - Personal branding<br>
+          - Content marketing strategy<br>
+          - Social media presence<br>
+          <b>Action Items:</b><br>
+          1. Create content calendar<br>
+          2. Write first LinkedIn article<br>
+          3. Design marketing materials</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 13</h3>
+        <p>Network Building<br>
+- Professional networking strategies<br>
+- Building relationships with clients<br>
+- Leveraging LinkedIn<br>
+<b>Action Items:</b><br>
+1. Join 3 relevant LinkedIn groups<br>
+2. Connect with 10 potential clients<br>
+3. Schedule 2 virtual coffee chats</p>
+    </div>
+
+    <div class="day-section">
+        <h3>Day 14</h3>
+        <p>Sustainable Success<br>
+          - Time management strategies<br>
+          - Client relationship management<br>
+          - Continuing education<br>
+          <b>Action Items:</b><br>
+          1. Create 90-day action plan<br>
+          2. Set up client feedback system<br>
+          3. Join ID professional organizations<br>
+          
+          <b>Community Follow-Up:</b><br>
+          - Weekly accountability check-ins<br>
+          - Monthly success story spotlights<br>
+          - Quarterly virtual meetups<br>
+          - Private LinkedIn group for course alumni <br>
+          - Resource sharing platform<br>
+          - Mentorship opportunities</p>
+    </div>
+    <div data-include="footer.html"></div>
+</body>
+</html>

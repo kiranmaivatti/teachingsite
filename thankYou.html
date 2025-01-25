@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thankYou.css">
+   
+    <title>ThankYou page</title>
+</head>
+<body>
+    
+    <script>
+
+// Function to include external HTML content
+function includeHTML() {
+  const elements = document.querySelectorAll('[data-include]');
+  elements.forEach(async (el) => {
+      const file = el.getAttribute('data-include');
+      if (file) {
+          try {
+              const response = await fetch(file);
+              if (response.ok) {
+                  el.innerHTML = await response.text();
+              } else {
+                  el.innerHTML = `<p>Error loading ${file}</p>`;
+              }
+          } catch (err) {
+              console.error(`Error including ${file}:`, err);
+          }
+      }
+  });
+}
+// Call the function after the DOM is loaded
+document.addEventListener('DOMContentLoaded', includeHTML);
+      </script>
+    <div class="content-container">
+        
+    <h3>
+    Congratulations on Successfully Enrolling in the 14 Day Freelancer program!
+</h3>
+
+    <!-- Video Section -->
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+           
+    </video>   
+    
+        <button onclick="window.location.href='https://www.facebook.com/share/g/1Gz81TMddX/?mibextid=wwXIfr';">Join Our Free Community</button>
+        </div>
+        
+</body>
+</html>
+    

@@ -1,0 +1,202 @@
+body{
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif; color: rgb(31, 32, 63);
+  background-image: url('images/background.jpg');
+  background-size: cover; /* Ensure the image covers the entire page */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center;
+   line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+.gallery {
+width: 90%;
+background: #fff;
+padding: 20px;
+border: 2px solid #ccc;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+gap: 20px;
+}
+.gallery-item {
+flex: 1;
+text-align: center;
+background: #fafafa;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 10px;
+}
+
+.rating {
+color: gold;
+font-size: 1.2rem;
+margin: 5px 0;
+}
+
+.testimonial {
+font-size: 0.9rem;
+color: #555;
+line-height: 1.5;
+font-style: italic;
+}
+h2.first {
+  text-align: center; /* Center align the heading */
+  color: #2b668c; /* Optional: Change text color */
+}
+.container {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically aligns items */
+  gap: 150px; 
+  margin-left: 20px;/* Adds space between video and text */
+}
+video {
+  width: 300px; /* Adjust the width of the video */
+
+  border-radius: 7%; 
+}
+.text {
+  max-width: 800px; /* Restrict text width for better readability */
+  margin-bottom: 5px; /* Adjust spacing below the title */
+  position: relative; /* Allows precise adjustment */
+  align-items: center;
+  top: -30px; /* Moves the title up by 10 pixels */
+}
+.text h2 {
+  margin-bottom: 5px; /* Adjust spacing below the title */
+  position: relative; /* Allows precise adjustment */
+  top: -30px; /* Moves the title up by 10 pixels */
+  
+}
+.images-container {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+.images-container img {
+  width: 800px; /* Reduced width */
+  height: 80px; /* Keep aspect ratio */
+  border-radius: 8px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes any gaps between cells */
+}
+td {
+  border: none; /* Makes the table cells invisible */
+  padding: 10px;
+  text-align: left;
+}
+.center-button {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 20px; /* Full viewport height */
+}
+button {
+  align-items: center;
+  background-color: #2b668c; /* Blue background */
+  color: rgb(241, 234, 237); /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for a comfortable size */
+  font-size: 18px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  align-items: center;
+  background-color: #7a6f6f; /* Darker grey on hover */
+}
+h2 {
+  text-align: left;
+  color: #2b668c;
+}
+
+.day-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.day-section h2 {
+  color: #005bb5;
+}
+
+.day-section p {
+  margin-top: 10px;
+}
+.text-padding {
+  padding-left: 30px; /* Adds 20px space before text */
+}
+/*Header and Footer*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100px;
+}
+
+/* Header Styles */
+header {
+  background-color: #2b668c;
+  color: rgb(241, 234, 237);
+  padding: 1rem 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(241, 234, 237);
+  font-size: 1rem;
+  
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2b668c;
+  color: rgb(241, 234, 237);  
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 20px;
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Join Freelance Program</title>   
+</head>
+<body>
+    <div data-include="header.html"></div>
+    <h2 class="first">Join 14 Day Freelancer Today</h2>
+    <div class="image-container">
+   <img src="images/14day_freelancer_salespage.jpg" alt="Example Image">
+   <br><br>
+   <script async
+   src="https://js.stripe.com/v3/buy-button.js"></script>
+ <stripe-buy-button
+   buy-button-id="buy_btn_1Qi4XnG8pWCODdvdpbqLF4zk"
+   publishable-key="pk_test_51QhfS1G8pWCODdvdGv77XNuYVunWla67RkV8hUbeLp9wyByDvZ3BU9rmkCVtH9e3fZWpvR66jv5MeMFyoMKF2YL500HLr06rWO">
+ </stripe-buy-button>
+    <div>
+        <div class="numbered-list">
+        <h2 class="first">Enroll in 14 Day Freelancer Today to 
+            Start Your Career Transition NOW</h2>  
+            <ol>
+                <li>The only speed-learning program for transitioning 
+                teachers and other professionals to level up their
+                skills and start working as freelancers NOW.</li>
+                <li>Step-by-step guides and tutorials for setting up your
+                side gig or full time freelancing business today.</li>
+                <li>14 Days of hands-on content guarenteed to improve 
+                your skills and get you started on your freelancing journey.</li>
+            </ol>   
+            <br>
+            <img src="images/customerSatisfaction.jpg" alt="Example Image" width="150px" height="150px">
+        </div>
+    </div>
+    </div>
+    <!-- </div> -->
+    <script>
+    function redirect() {
+        window.location.href = "thankYou.html";
+    }
+    function includeHTML() {
+  const elements = document.querySelectorAll('[data-include]');
+  elements.forEach(async (el) => {
+      const file = el.getAttribute('data-include');
+      if (file) {
+          try {
+              const response = await fetch(file);
+              if (response.ok) {
+                  el.innerHTML = await response.text();
+              } else {
+                  el.innerHTML = `<p>Error loading ${file}</p>`;
+              }
+          } catch (err) {
+              console.error(`Error including ${file}:`, err);
+          }
+      }
+  });
+}
+// Call the function after the DOM is loaded
+document.addEventListener('DOMContentLoaded', includeHTML);
+    </script>
+<div class="center-button">
+    <button onclick="redirect()">Complete Order</button>
+    </div>
+    <br>
+    <div data-include="footer.html"></div>
+</body>
+</html>
